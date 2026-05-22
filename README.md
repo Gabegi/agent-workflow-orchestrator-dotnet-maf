@@ -78,4 +78,4 @@ CI/CD via GitHub Actions (self-hosted runner, MSI authentication):
 - Azure AI Search
 - Microsoft Graph API
 - Terraform
-- GitHub Actions
+- GitHub Actions ()

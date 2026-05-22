@@ -18,8 +18,8 @@ Nurse asks question
        ├──────────────────────┬──────────────────────┐
        ▼                      ▼                      ▼
   O365 Agent            SQL Agent           AI Search Agent
-  (SharePoint /         (Medimo /           (Azure AI Search /
-   Graph API)            patient DB)         vector RAG)
+  (SharePoint /         (patient DB /       (Azure AI Search /
+   Graph API)            SQL)                vector RAG)
        │                      │                      │
        └──────────────────────┴──────────────────────┘
                               │
@@ -47,7 +47,7 @@ Nurse asks question
 Queries SharePoint and Office 365 content via the **Microsoft Graph API** — the gateway to all O365 data. Used for clinical protocols, procedures, and policy documents stored in SharePoint.
 
 ### SQL Agent
-Queries the **Medimo** patient database directly via SQL. Used for patient-specific data such as medication history, dosage records, and administration logs.
+Queries the patient database directly via SQL. Used for patient-specific data such as medication history, dosage records, and administration logs.
 
 ### Azure AI Search Agent
 Queries an **Azure AI Search** index using vector search (RAG). Clinical protocols and documents are indexed here and retrieved by semantic similarity. This is the primary RAG agent for unstructured document retrieval.

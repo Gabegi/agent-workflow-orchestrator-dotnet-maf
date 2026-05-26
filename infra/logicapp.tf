@@ -26,14 +26,37 @@ resource "azurerm_api_connection" "search" {
   tags = azurerm_resource_group.main.tags
 }
 
-# Logic App Consumption workflow
+# Logic App Consumption workflow — daily recurrence at 2am CET
 resource "azurerm_logic_app_workflow" "sharepoint_ingestion" {
   name                = "happyliving-sharepoint-ingestion"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
+  workflow_schema     = "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#"
+  workflow_version    = "1.0.0.0"
 
   identity {
     type = "SystemAssigned"
+  }
+
+  workflow_parameters = {
+    "$definition" = jsonencode({
+      "$schema" = "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#"
+      "triggers" = {
+        "recurrence" = {
+          "type" = "Recurrence"
+          "recurrence" = {
+            "frequency" = "Day"
+            "interval"  = 1
+            "schedule" = {
+              "hours"   = ["2"]
+              "minutes" = ["0"]
+            }
+            "timeZone" = "W. Europe Standard Time"
+          }
+        }
+      }
+      "actions" = {}
+    })
   }
 
   parameters = {

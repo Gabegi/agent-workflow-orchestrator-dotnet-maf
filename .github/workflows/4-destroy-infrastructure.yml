@@ -36,8 +36,8 @@ jobs:
 
       - name: Purge Key Vault (bypass soft-delete wait)
         run: |
-          az keyvault delete --name kv-happyliving-dev --resource-group rg-happyliving-dev 2>/dev/null || true
-          az keyvault purge --name kv-happyliving-dev --location eastus 2>/dev/null || true
+          az keyvault delete --name kv-happyliving-dev --resource-group rg-happyliving-dev --no-wait 2>/dev/null || true
+          az keyvault purge --name kv-happyliving-dev --location eastus --no-wait 2>/dev/null || true
 
       - uses: hashicorp/setup-terraform@v2
 

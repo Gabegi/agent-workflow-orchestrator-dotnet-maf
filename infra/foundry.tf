@@ -4,7 +4,7 @@
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_ai_foundry" "hub" {
-  name                = "aih-workflow-maf-dev"
+  name                = "aih-happyliving-dev"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
   storage_account_id  = azurerm_storage_account.foundry.id
@@ -18,7 +18,7 @@ resource "azurerm_ai_foundry" "hub" {
 }
 
 resource "azurerm_ai_foundry_project" "main" {
-  name               = "aip-workflow-maf-dev"
+  name               = "aip-happyliving-dev"
   location           = azurerm_resource_group.main.location
   ai_services_hub_id = azurerm_ai_foundry.hub.id
 

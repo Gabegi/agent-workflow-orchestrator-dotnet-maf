@@ -28,11 +28,11 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "main" {
-  name     = "rg-workflow-agent-maf"
+  name     = "rg-happyliving-dev"
   location = "eastus2"
 
   tags = {
-    project     = "workflow-agent-maf"
+    project     = "happyliving"
     environment = "dev"
   }
 }

@@ -33,7 +33,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "main" {
   name     = "rg-happyliving-dev"
-  location = "eastus2"
+  location = "eastus"
 
   tags = {
     project     = "happyliving"

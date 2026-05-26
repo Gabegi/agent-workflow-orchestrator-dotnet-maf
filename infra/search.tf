@@ -1,10 +1,15 @@
 # search.tf
+# Azure AI Search — shared across all agents
 
 resource "azurerm_search_service" "main" {
-  name                = "srch-workflow-maf-dev"
+  name                = "srch-happyliving-dev"
   resource_group_name = azurerm_resource_group.main.name
-  location            = "eastus"
-  sku                 = "basic"
+  location            = azurerm_resource_group.main.location
+  sku                 = "standard"
+
+  identity {
+    type = "SystemAssigned"
+  }
 
   tags = azurerm_resource_group.main.tags
 }

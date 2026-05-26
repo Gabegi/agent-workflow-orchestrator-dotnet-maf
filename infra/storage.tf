@@ -1,7 +1,7 @@
 # storage.tf
 
 resource "azurerm_storage_account" "foundry" {
-  name                     = "safoundrymafdev"
+  name                     = "sahappylivingdev"
   resource_group_name      = azurerm_resource_group.main.name
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"

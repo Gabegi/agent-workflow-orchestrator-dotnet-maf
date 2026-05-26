@@ -7,5 +7,9 @@ resource "azurerm_storage_account" "foundry" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
+  timeouts {
+    create = "30m"
+  }
+
   tags = azurerm_resource_group.main.tags
 }

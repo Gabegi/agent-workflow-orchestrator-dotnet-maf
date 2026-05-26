@@ -11,5 +11,9 @@ resource "azurerm_search_service" "main" {
     type = "SystemAssigned"
   }
 
+  timeouts {
+    create = "30m"
+  }
+
   tags = azurerm_resource_group.main.tags
 }

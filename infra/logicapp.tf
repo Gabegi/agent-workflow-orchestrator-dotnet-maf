@@ -62,7 +62,67 @@ resource "azurerm_logic_app_workflow" "sharepoint_ingestion" {
           }
         }
       }
-      "actions" = {}
+      "actions" = {
+        "list_files" = {
+          "type" = "ApiConnection"
+          "inputs" = {
+            "host" = {
+              "connection" = {
+                "name" = "@parameters('$connections')['sharepoint']['connectionId']"
+              }
+            }
+            "method" = "get"
+            "path"   = "/datasets/@{encodeURIComponent('https://yourtenant.sharepoint.com/sites/happyliving')}/tables/@{encodeURIComponent('Shared Documents')}/items"
+          }
+          "runAfter" = {}
+        }
+        "for_each_file" = {
+          "type"    = "Foreach"
+          "foreach" = "@body('list_files')?['value']"
+          "runAfter" = {
+            "list_files" = ["Succeeded"]
+          }
+          "actions" = {
+            "get_file_content" = {
+              "type" = "ApiConnection"
+              "inputs" = {
+                "host" = {
+                  "connection" = {
+                    "name" = "@parameters('$connections')['sharepoint']['connectionId']"
+                  }
+                }
+                "method" = "get"
+                "path"   = "/datasets/@{encodeURIComponent('https://yourtenant.sharepoint.com/sites/happyliving')}/files/@{encodeURIComponent(items('for_each_file')?['ID'])}/content"
+              }
+              "runAfter" = {}
+            }
+            "push_to_search" = {
+              "type" = "ApiConnection"
+              "inputs" = {
+                "host" = {
+                  "connection" = {
+                    "name" = "@parameters('$connections')['azureaisearch']['connectionId']"
+                  }
+                }
+                "method" = "post"
+                "path"   = "/indexes/happyliving-sharepoint-index/docs/index"
+                "body" = {
+                  "value" = [{
+                    "@search.action" = "mergeOrUpload"
+                    "id"          = "@{items('for_each_file')?['ID']}"
+                    "content"     = "@{body('get_file_content')}"
+                    "source_file" = "@{items('for_each_file')?['Path']}"
+                    "title"       = "@{items('for_each_file')?['Name']}"
+                  }]
+                }
+              }
+              "runAfter" = {
+                "get_file_content" = ["Succeeded"]
+              }
+            }
+          }
+        }
+      }
     })
   }
 

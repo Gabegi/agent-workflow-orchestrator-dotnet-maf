@@ -54,6 +54,13 @@ resource "azurerm_logic_app_workflow" "sharepoint_ingestion" {
             "timeZone" = "W. Europe Standard Time"
           }
         }
+        "manual" = {
+          "type" = "Request"
+          "kind" = "Http"
+          "inputs" = {
+            "schema" = {}
+          }
+        }
       }
       "actions" = {}
     })

@@ -1,23 +1,45 @@
 # logicapp.tf
 # Logic App (Consumption) for SharePoint → AI Search ingestion
 
-# SharePoint Online managed API connection (requires manual OAuth authorization in portal)
-resource "azurerm_api_connection" "sharepoint" {
-  name                = "happyliving-sharepoint"
-  resource_group_name = azurerm_resource_group.main.name
-  managed_api_id      = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/sharepointonline"
-  display_name        = "SharePoint Online — Happy Living"
+# SharePoint Online API connection (OAuth — authorize manually in portal after deploy)
+resource "azapi_resource" "sharepoint_connection" {
+  type      = "Microsoft.Web/connections@2016-06-01"
+  name      = "happyliving-sharepoint"
+  location  = azurerm_resource_group.main.location
+  parent_id = azurerm_resource_group.main.id
+
+  body = {
+    properties = {
+      displayName = "SharePoint Online — Happy Living"
+      api = {
+        id = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/sharepointonline"
+      }
+    }
+  }
 
   tags = azurerm_resource_group.main.tags
 }
 
-# Azure AI Search managed API connection
-# Auth configured manually in portal after deploy (managed identity)
-resource "azurerm_api_connection" "search" {
-  name                = "happyliving-search"
-  resource_group_name = azurerm_resource_group.main.name
-  managed_api_id      = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/azureaisearch"
-  display_name        = "Azure AI Search — Happy Living"
+# Azure AI Search API connection (managed identity)
+resource "azapi_resource" "search_connection" {
+  type      = "Microsoft.Web/connections@2016-06-01"
+  name      = "happyliving-search"
+  location  = azurerm_resource_group.main.location
+  parent_id = azurerm_resource_group.main.id
+
+  body = {
+    properties = {
+      displayName        = "Azure AI Search — Happy Living"
+      parameterValueType = "Alternative"
+      alternativeParameterValues = {
+        authType         = "ManagedServiceIdentity"
+        searchServiceUrl = "https://${azurerm_search_service.main.name}.search.windows.net"
+      }
+      api = {
+        id = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/azureaisearch"
+      }
+    }
+  }
 
   tags = azurerm_resource_group.main.tags
 }

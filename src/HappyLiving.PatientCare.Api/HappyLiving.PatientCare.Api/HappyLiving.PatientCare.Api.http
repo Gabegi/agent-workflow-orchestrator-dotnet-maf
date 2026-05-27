@@ -1,0 +1,6 @@
+@HappyLiving.PatientCare.Api_HostAddress = http://localhost:5277
+
+GET {{HappyLiving.PatientCare.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

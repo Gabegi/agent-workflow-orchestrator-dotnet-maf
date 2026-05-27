@@ -13,9 +13,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPatients();
-app.MapWards();
-app.MapCoverage();
-app.MapProtocols();
+app.MapMedicationsDue();
+app.MapCarePlans();
+app.MapAllergies();
+app.MapAppointments();
+app.MapHistory();
 
 app.Run();

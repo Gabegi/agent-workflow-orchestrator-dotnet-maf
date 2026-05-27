@@ -1,0 +1,12 @@
+[
+  { "id": "AP001", "patientId": "P001", "type": "Cardiology Follow-up", "dateTime": "2026-06-03 10:00", "provider": "Dr. Ahmed El-Sayed", "location": "Cardiology Outpatient", "status": "Scheduled" },
+  { "id": "AP002", "patientId": "P001", "type": "Echocardiogram", "dateTime": "2026-06-10 09:00", "provider": "Radiology Dept.", "location": "Imaging Suite B", "status": "Scheduled" },
+  { "id": "AP003", "patientId": "P002", "type": "INR Blood Draw", "dateTime": "2026-05-28 08:30", "provider": "Lab Services", "location": "Haematology Lab", "status": "Scheduled" },
+  { "id": "AP004", "patientId": "P002", "type": "Anticoagulation Clinic", "dateTime": "2026-06-05 14:00", "provider": "Dr. Sofia Reyes", "location": "Outpatient Clinic 3", "status": "Scheduled" },
+  { "id": "AP005", "patientId": "P003", "type": "Endocrinology Consultation", "dateTime": "2026-06-01 11:00", "provider": "Dr. Ahmed El-Sayed", "location": "Endocrinology Clinic", "status": "Scheduled" },
+  { "id": "AP006", "patientId": "P003", "type": "Diabetes Nurse Education", "dateTime": "2026-05-29 13:00", "provider": "Nurse Educator M. Prins", "location": "Education Room 2", "status": "Scheduled" },
+  { "id": "AP007", "patientId": "P004", "type": "Surgical Wound Review", "dateTime": "2026-05-28 10:00", "provider": "Dr. Pieter van Dijk", "location": "Surgical Outpatient", "status": "Scheduled" },
+  { "id": "AP008", "patientId": "P004", "type": "Physiotherapy Assessment", "dateTime": "2026-05-27 09:00", "provider": "Physio Team", "location": "Physiotherapy Dept.", "status": "Completed" },
+  { "id": "AP009", "patientId": "P005", "type": "Lipid Panel Blood Draw", "dateTime": "2026-06-15 08:00", "provider": "Lab Services", "location": "Haematology Lab", "status": "Scheduled" },
+  { "id": "AP010", "patientId": "P005", "type": "Physiotherapy Session", "dateTime": "2026-05-28 14:00", "provider": "Physio Team", "location": "Physiotherapy Dept.", "status": "Scheduled" }
+]

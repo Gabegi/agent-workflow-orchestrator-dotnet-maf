@@ -1,11 +1,6 @@
 # logicapp.tf
 # Logic App (Consumption) for SharePoint → AI Search ingestion
 
-import {
-  to = azapi_resource.sharepoint_connection
-  id = "/subscriptions/${data.azurerm_subscription.current.subscription_id}/resourceGroups/rg-happyliving-dev/providers/Microsoft.Web/connections/happyliving-sharepoint"
-}
-
 # SharePoint Online API connection (OAuth — authorize manually in portal after deploy)
 resource "azapi_resource" "sharepoint_connection" {
   type      = "Microsoft.Web/connections@2016-06-01"

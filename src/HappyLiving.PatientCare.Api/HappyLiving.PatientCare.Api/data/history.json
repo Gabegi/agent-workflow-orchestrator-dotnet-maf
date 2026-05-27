@@ -1,0 +1,15 @@
+[
+  { "id": "H001", "patientId": "P001", "date": "2026-05-10", "type": "Admission", "description": "Admitted with acute decompensated heart failure. Bilateral oedema, dyspnoea at rest.", "provider": "Dr. Ahmed El-Sayed" },
+  { "id": "H002", "patientId": "P001", "date": "2026-05-12", "type": "Observation", "description": "Weight reduced by 2kg following diuretic therapy. Oedema improving.", "provider": "Lisa Janssen" },
+  { "id": "H003", "patientId": "P001", "date": "2026-05-20", "type": "Lab Result", "description": "BNP 450 pg/mL (down from 820 on admission). Renal function stable.", "provider": "Dr. Ahmed El-Sayed" },
+  { "id": "H004", "patientId": "P002", "date": "2026-05-15", "type": "Admission", "description": "Admitted for warfarin initiation following DVT diagnosis in left leg.", "provider": "Dr. Sofia Reyes" },
+  { "id": "H005", "patientId": "P002", "date": "2026-05-18", "type": "Lab Result", "description": "INR 1.4 — below therapeutic range. Dose adjusted to 3mg.", "provider": "Dr. Sofia Reyes" },
+  { "id": "H006", "patientId": "P002", "date": "2026-05-22", "type": "Lab Result", "description": "INR 2.3 — within therapeutic range (2.0–3.0). Continue current dose.", "provider": "Dr. Sofia Reyes" },
+  { "id": "H007", "patientId": "P003", "date": "2026-05-20", "type": "Admission", "description": "Admitted with poorly controlled Type 2 diabetes. HbA1c 11.2%. Starting insulin.", "provider": "Dr. Ahmed El-Sayed" },
+  { "id": "H008", "patientId": "P003", "date": "2026-05-23", "type": "Observation", "description": "Blood glucose stabilising. Fasting glucose 8.2 mmol/L, down from 16.4 on admission.", "provider": "Anna de Boer" },
+  { "id": "H009", "patientId": "P004", "date": "2026-05-22", "type": "Admission", "description": "Post-operative day 1 following right hip replacement surgery. Vitals stable.", "provider": "Dr. Pieter van Dijk" },
+  { "id": "H010", "patientId": "P004", "date": "2026-05-24", "type": "Observation", "description": "Mobilised with walking frame for first time. Pain VAS 4/10. Wound clean and dry.", "provider": "Lisa Janssen" },
+  { "id": "H011", "patientId": "P004", "date": "2026-05-26", "type": "Observation", "description": "Pain VAS 2/10. Mobilising well. Wound healing satisfactory.", "provider": "Lisa Janssen" },
+  { "id": "H012", "patientId": "P005", "date": "2026-05-25", "type": "Admission", "description": "Admitted for elective physiotherapy programme following right knee osteoarthritis.", "provider": "Dr. Sofia Reyes" },
+  { "id": "H013", "patientId": "P005", "date": "2026-05-26", "type": "Observation", "description": "Initial physio assessment completed. ROM right knee 45 degrees. Programme started.", "provider": "Physio Team" }
+]

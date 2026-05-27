@@ -1,0 +1,57 @@
+[
+  {
+    "id": "P001",
+    "fullName": "Maria van den Berg",
+    "dateOfBirth": "1942-03-14",
+    "gender": "Female",
+    "wardId": "W001",
+    "roomNumber": "101A",
+    "admissionDate": "2026-05-10",
+    "primaryNurse": "Lisa Janssen",
+    "primaryDoctor": "Dr. Ahmed El-Sayed"
+  },
+  {
+    "id": "P002",
+    "fullName": "Hendrik de Vries",
+    "dateOfBirth": "1938-07-22",
+    "gender": "Male",
+    "wardId": "W001",
+    "roomNumber": "102B",
+    "admissionDate": "2026-05-15",
+    "primaryNurse": "Tom Bakker",
+    "primaryDoctor": "Dr. Sofia Reyes"
+  },
+  {
+    "id": "P003",
+    "fullName": "Cornelia Smits",
+    "dateOfBirth": "1950-11-05",
+    "gender": "Female",
+    "wardId": "W002",
+    "roomNumber": "201A",
+    "admissionDate": "2026-05-20",
+    "primaryNurse": "Anna de Boer",
+    "primaryDoctor": "Dr. Ahmed El-Sayed"
+  },
+  {
+    "id": "P004",
+    "fullName": "Johannes Meijer",
+    "dateOfBirth": "1945-01-30",
+    "gender": "Male",
+    "wardId": "W002",
+    "roomNumber": "203C",
+    "admissionDate": "2026-05-22",
+    "primaryNurse": "Lisa Janssen",
+    "primaryDoctor": "Dr. Pieter van Dijk"
+  },
+  {
+    "id": "P005",
+    "fullName": "Wilhelmina Kuiper",
+    "dateOfBirth": "1955-09-18",
+    "gender": "Female",
+    "wardId": "W003",
+    "roomNumber": "305B",
+    "admissionDate": "2026-05-25",
+    "primaryNurse": "Tom Bakker",
+    "primaryDoctor": "Dr. Sofia Reyes"
+  }
+]

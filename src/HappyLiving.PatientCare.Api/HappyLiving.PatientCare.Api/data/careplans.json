@@ -1,0 +1,79 @@
+[
+  {
+    "id": "CP001",
+    "patientId": "P001",
+    "createdDate": "2026-05-10",
+    "reviewDate": "2026-06-10",
+    "assignedNurse": "Lisa Janssen",
+    "goals": [
+      { "id": "G001", "description": "Stabilise blood pressure below 140/90", "targetDate": "2026-06-01", "status": "In Progress" },
+      { "id": "G002", "description": "Reduce oedema in lower limbs", "targetDate": "2026-05-31", "status": "In Progress" }
+    ],
+    "interventions": [
+      { "id": "I001", "description": "Daily weight monitoring", "frequency": "Daily", "assignedTo": "Lisa Janssen" },
+      { "id": "I002", "description": "Fluid intake restriction to 1.5L/day", "frequency": "Daily", "assignedTo": "Lisa Janssen" },
+      { "id": "I003", "description": "Blood pressure check", "frequency": "Twice daily", "assignedTo": "Lisa Janssen" }
+    ]
+  },
+  {
+    "id": "CP002",
+    "patientId": "P002",
+    "createdDate": "2026-05-15",
+    "reviewDate": "2026-06-15",
+    "assignedNurse": "Tom Bakker",
+    "goals": [
+      { "id": "G003", "description": "Maintain therapeutic INR between 2.0 and 3.0", "targetDate": "2026-06-15", "status": "In Progress" },
+      { "id": "G004", "description": "Prevent fall incidents", "targetDate": "2026-06-15", "status": "Active" }
+    ],
+    "interventions": [
+      { "id": "I004", "description": "Weekly INR blood draw", "frequency": "Weekly", "assignedTo": "Tom Bakker" },
+      { "id": "I005", "description": "Fall risk assessment", "frequency": "Daily", "assignedTo": "Tom Bakker" },
+      { "id": "I006", "description": "Bed rails up at night", "frequency": "Nightly", "assignedTo": "Tom Bakker" }
+    ]
+  },
+  {
+    "id": "CP003",
+    "patientId": "P003",
+    "createdDate": "2026-05-20",
+    "reviewDate": "2026-06-20",
+    "assignedNurse": "Anna de Boer",
+    "goals": [
+      { "id": "G005", "description": "Maintain blood glucose between 6 and 10 mmol/L", "targetDate": "2026-06-20", "status": "In Progress" },
+      { "id": "G006", "description": "Patient education on insulin self-administration", "targetDate": "2026-06-01", "status": "Not Started" }
+    ],
+    "interventions": [
+      { "id": "I007", "description": "Blood glucose monitoring before meals", "frequency": "3x daily", "assignedTo": "Anna de Boer" },
+      { "id": "I008", "description": "Diabetic diet compliance check", "frequency": "Daily", "assignedTo": "Anna de Boer" }
+    ]
+  },
+  {
+    "id": "CP004",
+    "patientId": "P004",
+    "createdDate": "2026-05-22",
+    "reviewDate": "2026-06-22",
+    "assignedNurse": "Lisa Janssen",
+    "goals": [
+      { "id": "G007", "description": "Pain management — VAS score below 3", "targetDate": "2026-05-30", "status": "In Progress" },
+      { "id": "G008", "description": "Wound healing post-surgery", "targetDate": "2026-06-10", "status": "In Progress" }
+    ],
+    "interventions": [
+      { "id": "I009", "description": "Pain score assessment", "frequency": "Every 4 hours", "assignedTo": "Lisa Janssen" },
+      { "id": "I010", "description": "Wound dressing change", "frequency": "Every 2 days", "assignedTo": "Lisa Janssen" }
+    ]
+  },
+  {
+    "id": "CP005",
+    "patientId": "P005",
+    "createdDate": "2026-05-25",
+    "reviewDate": "2026-06-25",
+    "assignedNurse": "Tom Bakker",
+    "goals": [
+      { "id": "G009", "description": "Improve mobility — walk 50m unaided", "targetDate": "2026-06-15", "status": "In Progress" },
+      { "id": "G010", "description": "Reduce cholesterol to below 5.0 mmol/L", "targetDate": "2026-07-01", "status": "In Progress" }
+    ],
+    "interventions": [
+      { "id": "I011", "description": "Physiotherapy session", "frequency": "Daily", "assignedTo": "Physio Team" },
+      { "id": "I012", "description": "Lipid panel blood draw", "frequency": "Monthly", "assignedTo": "Tom Bakker" }
+    ]
+  }
+]

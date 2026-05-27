@@ -1,0 +1,112 @@
+[
+  {
+    "id": "MD001",
+    "patientId": "P001",
+    "medicationName": "Metoprolol",
+    "dose": "50mg",
+    "route": "Oral",
+    "scheduledTime": "08:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Ahmed El-Sayed",
+    "notes": "Take with food"
+  },
+  {
+    "id": "MD002",
+    "patientId": "P001",
+    "medicationName": "Furosemide",
+    "dose": "40mg",
+    "route": "Oral",
+    "scheduledTime": "08:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Ahmed El-Sayed",
+    "notes": null
+  },
+  {
+    "id": "MD003",
+    "patientId": "P001",
+    "medicationName": "Lisinopril",
+    "dose": "10mg",
+    "route": "Oral",
+    "scheduledTime": "20:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Ahmed El-Sayed",
+    "notes": null
+  },
+  {
+    "id": "MD004",
+    "patientId": "P002",
+    "medicationName": "Amlodipine",
+    "dose": "5mg",
+    "route": "Oral",
+    "scheduledTime": "08:00",
+    "status": "Administered",
+    "prescribedBy": "Dr. Sofia Reyes",
+    "notes": null
+  },
+  {
+    "id": "MD005",
+    "patientId": "P002",
+    "medicationName": "Warfarin",
+    "dose": "2.5mg",
+    "route": "Oral",
+    "scheduledTime": "18:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Sofia Reyes",
+    "notes": "Check INR before administering"
+  },
+  {
+    "id": "MD006",
+    "patientId": "P003",
+    "medicationName": "Insulin Glargine",
+    "dose": "20 units",
+    "route": "Subcutaneous",
+    "scheduledTime": "08:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Ahmed El-Sayed",
+    "notes": "Check blood glucose first"
+  },
+  {
+    "id": "MD007",
+    "patientId": "P003",
+    "medicationName": "Metformin",
+    "dose": "500mg",
+    "route": "Oral",
+    "scheduledTime": "12:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Ahmed El-Sayed",
+    "notes": "Take with meal"
+  },
+  {
+    "id": "MD008",
+    "patientId": "P004",
+    "medicationName": "Omeprazole",
+    "dose": "20mg",
+    "route": "Oral",
+    "scheduledTime": "08:00",
+    "status": "Administered",
+    "prescribedBy": "Dr. Pieter van Dijk",
+    "notes": "Take 30 minutes before breakfast"
+  },
+  {
+    "id": "MD009",
+    "patientId": "P004",
+    "medicationName": "Paracetamol",
+    "dose": "1000mg",
+    "route": "Oral",
+    "scheduledTime": "08:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Pieter van Dijk",
+    "notes": null
+  },
+  {
+    "id": "MD010",
+    "patientId": "P005",
+    "medicationName": "Atorvastatin",
+    "dose": "40mg",
+    "route": "Oral",
+    "scheduledTime": "22:00",
+    "status": "Pending",
+    "prescribedBy": "Dr. Sofia Reyes",
+    "notes": "Take at bedtime"
+  }
+]

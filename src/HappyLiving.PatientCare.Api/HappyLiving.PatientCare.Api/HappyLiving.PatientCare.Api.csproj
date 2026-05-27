@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="data\**">
+    <None Update="data\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,11 @@
 # logicapp.tf
 # Logic App (Consumption) for SharePoint → AI Search ingestion
 
+import {
+  to = azapi_resource.sharepoint_connection
+  id = "/subscriptions/${data.azurerm_subscription.current.subscription_id}/resourceGroups/rg-happyliving-dev/providers/Microsoft.Web/connections/happyliving-sharepoint"
+}
+
 # SharePoint Online API connection (OAuth — authorize manually in portal after deploy)
 resource "azapi_resource" "sharepoint_connection" {
   type      = "Microsoft.Web/connections@2016-06-01"
@@ -30,12 +35,7 @@ resource "azapi_resource" "search_connection" {
 
   body = {
     properties = {
-      displayName        = "Azure AI Search — Happy Living"
-      parameterValueType = "Alternative"
-      alternativeParameterValues = {
-        authType         = "ManagedServiceIdentity"
-        searchServiceUrl = "https://${azurerm_search_service.main.name}.search.windows.net"
-      }
+      displayName = "Azure AI Search — Happy Living"
       api = {
         id = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/azureaisearch"
       }

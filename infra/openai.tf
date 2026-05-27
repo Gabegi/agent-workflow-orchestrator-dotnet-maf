@@ -47,10 +47,3 @@ resource "azurerm_cognitive_deployment" "embedding" {
     capacity = 50
   }
 }
-
-# AI Search can call OpenAI for vectorisation (no API keys)
-resource "azurerm_role_assignment" "search_openai" {
-  scope                = azurerm_cognitive_account.openai.id
-  role_definition_name = "Cognitive Services OpenAI User"
-  principal_id         = azurerm_search_service.main.identity[0].principal_id
-}

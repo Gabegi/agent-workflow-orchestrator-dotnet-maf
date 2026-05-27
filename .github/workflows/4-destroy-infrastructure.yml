@@ -14,6 +14,12 @@ jobs:
     runs-on: [self-hosted]
     environment: destroy
     steps:
+      - name: Mask sensitive values
+        run: |
+          echo "::add-mask::${{ secrets.AZURE_SUBSCRIPTION_ID }}"
+          echo "::add-mask::${{ secrets.AZURE_TENANT_ID }}"
+          echo "::add-mask::${{ secrets.ADMIN_OBJECT_ID }}"
+
       - name: Confirm destruction intent
         if: ${{ github.event.inputs.confirmation != 'DESTROY' }}
         run: |

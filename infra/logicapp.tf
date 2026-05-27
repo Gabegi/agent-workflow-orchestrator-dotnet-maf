@@ -11,17 +11,13 @@ resource "azurerm_api_connection" "sharepoint" {
   tags = azurerm_resource_group.main.tags
 }
 
-# Azure AI Search managed API connection (managed identity — no credentials needed)
+# Azure AI Search managed API connection
+# Auth configured manually in portal after deploy (managed identity)
 resource "azurerm_api_connection" "search" {
   name                = "happyliving-search"
   resource_group_name = azurerm_resource_group.main.name
   managed_api_id      = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/azureaisearch"
   display_name        = "Azure AI Search — Happy Living"
-
-  parameter_values = {
-    authType         = "ManagedServiceIdentity"
-    searchServiceUrl = "https://${azurerm_search_service.main.name}.search.windows.net"
-  }
 
   tags = azurerm_resource_group.main.tags
 }

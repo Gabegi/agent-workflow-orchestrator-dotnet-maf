@@ -147,14 +147,14 @@ resource "azurerm_logic_app_workflow" "sharepoint_ingestion" {
   parameters = {
     "$connections" = jsonencode({
       sharepoint = {
-        connectionId   = azurerm_api_connection.sharepoint.id
-        connectionName = azurerm_api_connection.sharepoint.name
-        id             = azurerm_api_connection.sharepoint.managed_api_id
+        connectionId   = azapi_resource.sharepoint_connection.id
+        connectionName = azapi_resource.sharepoint_connection.name
+        id             = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/sharepointonline"
       }
       azureaisearch = {
-        connectionId   = azurerm_api_connection.search.id
-        connectionName = azurerm_api_connection.search.name
-        id             = azurerm_api_connection.search.managed_api_id
+        connectionId   = azapi_resource.search_connection.id
+        connectionName = azapi_resource.search_connection.name
+        id             = "${data.azurerm_subscription.current.id}/providers/Microsoft.Web/locations/${azurerm_resource_group.main.location}/managedApis/azureaisearch"
       }
     })
   }

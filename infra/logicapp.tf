@@ -22,10 +22,11 @@ resource "azapi_resource" "sharepoint_connection" {
 
 # Azure AI Search API connection (managed identity)
 resource "azapi_resource" "search_connection" {
-  type      = "Microsoft.Web/connections@2016-06-01"
-  name      = "happyliving-search"
-  location  = azurerm_resource_group.main.location
-  parent_id = azurerm_resource_group.main.id
+  type                    = "Microsoft.Web/connections@2016-06-01"
+  name                    = "happyliving-search"
+  location                = azurerm_resource_group.main.location
+  parent_id               = azurerm_resource_group.main.id
+  schema_validation_enabled = false
 
   body = {
     properties = {

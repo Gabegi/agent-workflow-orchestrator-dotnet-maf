@@ -1,0 +1,9 @@
+[
+  { "id": "AL001", "patientId": "P001", "allergen": "Penicillin", "severity": "Severe", "reaction": "Anaphylaxis", "notes": "Carry EpiPen" },
+  { "id": "AL002", "patientId": "P001", "allergen": "Latex", "severity": "Moderate", "reaction": "Contact dermatitis", "notes": "Use latex-free gloves" },
+  { "id": "AL003", "patientId": "P002", "allergen": "Aspirin", "severity": "Severe", "reaction": "Bronchospasm", "notes": "NSAIDs contraindicated" },
+  { "id": "AL004", "patientId": "P003", "allergen": "Sulfonamides", "severity": "Moderate", "reaction": "Skin rash", "notes": null },
+  { "id": "AL005", "patientId": "P003", "allergen": "Shellfish", "severity": "Mild", "reaction": "Urticaria", "notes": "Dietary restriction in place" },
+  { "id": "AL006", "patientId": "P004", "allergen": "Codeine", "severity": "Severe", "reaction": "Respiratory depression", "notes": "All opioids with caution" },
+  { "id": "AL007", "patientId": "P005", "allergen": "Contrast dye (iodine)", "severity": "Severe", "reaction": "Anaphylactoid reaction", "notes": "Pre-medicate before imaging" }
+]
